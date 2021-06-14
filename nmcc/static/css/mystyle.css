@@ -1,0 +1,4 @@
+{% load static %}
+div{
+	background-image: "{% static 'images/watrclr.jpg' %}"
+}

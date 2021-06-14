@@ -1,0 +1,20 @@
+{% extends 'nmcc/navbar.html' %}
+
+{% block title %}
+Vaccine centers
+{% endblock %}
+
+{% load static %}
+
+{% block body %}
+<div style="background-image:url({% static 'images/dots.jpg' %});background-size:100% 100%;">
+	<p>vaccine</p>
+	<h1 style="color: white;text-align: center">THE LIST OF VACCINE CENTERS IN {{dist}}</h1><br><br>
+	{% for i in data %}
+		<h4 style="color: white;text-align: center">{{i}}</h4>
+		<br><br>
+	{% endfor %}
+	<h5 style="text-align:center;color:grey;border-radius:1000px;">@ssr-developers-2021</h5>	
+</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% include 'nmcc/index.html'%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		{% block title %}
+
+		{% endblock %}
+	</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse" style="background-color:aqua;padding-top:5px">
+	  <div class="container-fluid">
+	    <div class="navbar-header active" style="border-radius:250px;background-color:red" >
+	      
+	      <a class="navbar-brand active" style="color:white;" href="{% url 'home' %}"><b>&nbspCOVID SUPPORT<b></a>
+	     
+	    </div>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="{% url 'home' %}">Home</a></li>
+	      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">check<span class="caret"></span></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="{% url 'register' %}">vaccine centers</a></li>
+	          
+	        
+
+	       
+	          <li><a href="http://covidtestunit.herokuapp.com/">Covid Testing Unit</a></li>
+	          
+	        </ul>
+	      </li>
+	      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">information<span class="caret"></span></a>
+
+	        <ul class="dropdown-menu">
+	          <li><a href="{% url 'hospitals'%}">COVID Hospitals</a></li>
+	       
+	        
+	          <li><a href="#"></a></li>
+	        </ul>
+	        <li ><a href="{% url 'owner' %}"><b>Owner</b></a></li>
+	      </li>
+	    </ul>
+	  </div>
+
+	{% block body %}
+	{% endblock %}
+	</nav>
+ </body>
+</html>

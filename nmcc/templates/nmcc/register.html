@@ -1,0 +1,40 @@
+{% extends 'nmcc/navbar.html' %}
+
+{% block title %}
+Register Page
+{% endblock %}
+
+{% load static %}
+
+{% block body %}
+<div>
+	<form action="{% url 'register'%}" method="POST">
+		{% csrf_token %}
+		<div style="text-align:center;"><br>
+			
+			
+			<h1 style="color:white" ><b>Registration page</b></h1>
+			
+			<h5 style="text-align:center;color:white">Kindly Register Here To Avail Details About Your Respective Vaccination Centers</h5><br><br>
+			<div style="color:white">
+				NAME:<input type="text" name="name" placeholder="Enter Your Name" style="color:black"required><br><br><br>
+				EMAIL:<input type="email" name="email" placeholder="Enter your Email" style="color:black"required><br><br><br>
+				MOBILE:<input type="text" name="mob" placeholder="Enter Your Mobile Number" style="color:black"required><br><br><br>
+				DISTRICT:<input type="text" name="dist" placeholder="Enter Your district" style="color:black"required><br><br>
+			</div>
+		<button style="color:white;background-color: blue">Submit</button>
+		</div>
+
+
+
+
+
+	</form>
+		
+	
+	<br><br><br><br><br><br>
+<h5 style="text-align:center;color:white;border-radius:1000px;">@ssr-developers-2021</h5>
+</div>
+
+
+{% endblock %}
