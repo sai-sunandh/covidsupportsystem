@@ -74,8 +74,6 @@ WSGI_APPLICATION = 'ccnm.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-DATABASE_URL=(heroku config:get DATABASE_URL -a nmcc)
 '''
 DATABASES = {
     'default': {
@@ -93,7 +91,7 @@ DATABASES ={
     'PASSWORD':'',
     'HOST':'',
     }
-}
+}'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -104,7 +102,7 @@ DATABASES = {
         'PASSWORD':'a6d2f3b00c8fd482706a0b957c0207f2b5127acfeb03cc332f86edaa2725717b',
     }
 }
-'''
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -138,7 +136,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-#STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
