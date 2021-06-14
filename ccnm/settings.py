@@ -74,14 +74,15 @@ WSGI_APPLICATION = 'ccnm.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-'''DATABASES ={
+
+DATABASES ={
     'default':{
     'ENGINE':'django.db.backends.mysql',
     'NAME':'nmcc',
@@ -90,8 +91,19 @@ DATABASES = {
     'PASSWORD':'',
     'HOST':'',
     }
+}'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'d44sannhttbt0',
+        'USER':'lclesujxmrthnl',
+        'PORT':5432,
+        'HOST':'ec2-54-237-143-127.compute-1.amazonaws.com',
+        'PASSWORD':'a6d2f3b00c8fd482706a0b957c0207f2b5127acfeb03cc332f86edaa2725717b',
+    }
 }
-'''
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
