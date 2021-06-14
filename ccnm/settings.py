@@ -87,7 +87,7 @@ DATABASES ={
     'ENGINE':'django.db.backends.mysql',
     'NAME':'nmcc',
     'USER':'root',
-    'PORT':'5432',
+    'PORT':5432,
     'HOST':'ec2-54-237-143-127.compute-1.amazonaws.com',
     'PASSWORD':'a6d2f3b00c8fd482706a0b957c0207f2b5127acfeb03cc332f86edaa2725717b',
     }
