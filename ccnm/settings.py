@@ -75,13 +75,15 @@ WSGI_APPLICATION = 'ccnm.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+DATABASE_URL=$(heroku config:get DATABASE_URL -a nmcc)
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-'''
+
 DATABASES ={
     'default':{
     'ENGINE':'django.db.backends.mysql',
