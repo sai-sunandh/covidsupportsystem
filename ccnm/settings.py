@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -74,14 +74,14 @@ WSGI_APPLICATION = 'ccnm.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+'''
 DATABASES ={
     'default':{
     'ENGINE':'django.db.backends.mysql',
@@ -91,7 +91,7 @@ DATABASES ={
     'HOST':'ec2-54-237-143-127.compute-1.amazonaws.com',
     'PASSWORD':'a6d2f3b00c8fd482706a0b957c0207f2b5127acfeb03cc332f86edaa2725717b',
     }
-}
+}'''
 '''
 DATABASES = {
     'default': {
@@ -103,7 +103,7 @@ DATABASES = {
         'PASSWORD':'a6d2f3b00c8fd482706a0b957c0207f2b5127acfeb03cc332f86edaa2725717b',
     }
 }
-
+'''
 
 
 # Password validation
@@ -138,9 +138,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-import django_heroku
-django_heroku.settings(locals())
-#STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
