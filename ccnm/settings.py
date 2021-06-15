@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-'''
+
 DATABASES ={
     'default':{
     'ENGINE':'django.db.backends.mysql',
@@ -103,7 +103,7 @@ DATABASES = {
         'PASSWORD':'a6d2f3b00c8fd482706a0b957c0207f2b5127acfeb03cc332f86edaa2725717b',
     }
 }
-'''
+
 
 
 # Password validation
@@ -138,6 +138,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+import django_heroku
+django_heroku.settings(locals())
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
